@@ -1,3 +1,8 @@
+/**
+ * Represent Student class
+ * @param {string} name defines student's name
+ * @constructor
+ */
 function Student(name) {
 
     const STATS = {
@@ -12,10 +17,16 @@ function Student(name) {
     var it = this;
     var condition = new Condition();
 
+    /**
+     * Returns current condition
+     * @returns {Condition}
+     */
     this.getCondition = function () {
         return condition;
     };
-
+    /**
+     * makes student go to sleep
+     */
     this.sleep = function () {
         try {
             condition.setProperties({
@@ -30,9 +41,11 @@ function Student(name) {
             performAction(e);
             this.sleep();
         }
-
     };
 
+    /**
+     * makes student eat
+     */
     this.eat = function () {
         try {
             condition.setProperties({
@@ -45,6 +58,9 @@ function Student(name) {
         }
     };
 
+    /**
+     * makes student go to party
+     */
     this.goParty = function () {
         try {
             condition.setProperties({
@@ -61,6 +77,9 @@ function Student(name) {
         }
     };
 
+    /**
+     * makes student pass exam
+     */
     this.passExam = function () {
         try {
             condition.updateProperties({
@@ -74,6 +93,9 @@ function Student(name) {
         }
     };
 
+    /**
+     *  makes student make labs
+     */
     this.makeLab = function () {
         try {
             condition.updateProperties({
@@ -87,6 +109,10 @@ function Student(name) {
         }
     };
 
+    /**
+     * Chooses action to do depending on received exception
+     * @param e defines exception
+     */
     var performAction = function (e) {
         if (e.description == 'less') {
             switch (e.propName) {
