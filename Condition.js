@@ -1,5 +1,4 @@
 /**
- *
  * Represents a condition class
  * @param drunk defines percent of alcohol intoxication
  * @param satiety defines percent of being sated
